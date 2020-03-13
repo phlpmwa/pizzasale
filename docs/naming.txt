@@ -1,0 +1,11 @@
+Request         Route     controller$action      view
+get             /pizzas   PizzaController@index  Index
+get             /pizzas/{id} PizzaController@show   show
+get             /pizzas/create PizzaController@create create
+
+
+model(Pizza)- singular of the database table(pizzas) whith first digit uppercase
+controller(PizzaController)- what ever the model is called then plus Controller
+index-show all the records.
+show-shows a single item.
+create-
