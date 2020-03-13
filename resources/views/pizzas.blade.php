@@ -72,31 +72,23 @@
                    Pizza List
                 </div>
 
-          /* <!-- <p>//{{$type}}-{{$base}}-{{$price}}</p>-->
-            @for($i=0;$i<count($pizzas);$i++)
-            <p>{{$pizzas[$i]['type']}}</p>
-            @endfor
-           <!-- @for($i=0; $i<5; $i++)
-            <p> the value of i is {{$i}}
-            </p>
-            @endfor-->
-
-            <!--
-            @if($price>15)
-            <p>this pizza is expensive</p>
           
-            @else
-            <p>Good price</p>
-            @endif
-               @unless ($base=="Cheesy crust")
-                   <p>you don't have a cheesy crust</p>
-               @endunless
+          <!--  @for($i=0;$i<count($pizzas);$i++)
+            <p>{{$pizzas[$i]['type']}}</p>
+            @endfor -->
 
-               @php
-                   $name='philip';
-                   echo($name);
-               @endphp
-               -->*/
+            @foreach($pizzas as $pizza)
+                <div>
+               {{$loop->index}} -- {{$pizza['type']}}--{{$pizza['base']}}
+                 @if($loop->first)
+                 <p>-----first operation-------</p>
+                 @endif
+                 @if($loop->last)
+                 <p>-----last operation-------</p>
+                 @endif
+                </div>
+            @endforeach
+           
             </div>
         </div>
     </body>
