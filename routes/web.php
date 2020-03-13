@@ -22,6 +22,9 @@ Route::get('/pizzas', function () {
    ['type'=>'hawaiffian','base'=>'clasffsic'],
    ['type'=>'hawaiffian','base'=>'classffic']
     ];
+
+    $name= request('name');
+    $AGE= request('name');
     /*
     $pizza=['type'=>'hawaiian',
     'base'=>'classic',
@@ -35,7 +38,11 @@ Route::get('/pizzas', function () {
     //return ['name'=>'veg pizzas','base'>'classic'];
     */
 
-    return view ('pizzas',['pizzas'=>$pizzas]);
+    return view ('pizzas',[ 
+        'pizzas'=>$pizzas,
+        'name'=> request('name'),
+        'age'=> request('age'),
+        ]);
 
 });
 
