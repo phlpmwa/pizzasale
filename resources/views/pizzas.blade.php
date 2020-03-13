@@ -8,18 +8,10 @@
                 <div class="title m-b-md">
                    Pizza List
                 </div>
-                <p>{{$name}}</p>
-                 <p>{{$age}}</p>
-
+               
           @foreach($pizzas as $pizza)
                 <div>
-               {{$loop->index}} -- {{$pizza['type']}}--{{$pizza['base']}}
-                 @if($loop->first)
-                 <p>-----first operation-------</p>
-                 @endif
-                 @if($loop->last)
-                 <p>-----last operation-------</p>
-                 @endif
+              {{$pizza->name}}--{{$pizza->type}}--{{$pizza->base}}
                 </div>
             @endforeach
             </div>
