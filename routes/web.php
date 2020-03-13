@@ -16,37 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/pizzas', function () {
-    $pizzas=[
-   ['type'=>'hawaiian','base'=>'classic'],
-   ['type'=>'hawaiffian','base'=>'clasffsic'],
-   ['type'=>'hawaiffian','base'=>'classffic']
-    ];
-
-    $name= request('name');
-    $AGE= request('name');
-    /*
-    $pizza=['type'=>'hawaiian',
-    'base'=>'classic',
-    'price'=>10
-];
-    return view('pizzas',$pizza);
-    //return view('pizzas',['type'=>'hawaiian','base'=>'classic']);
-    //return string
-    //return "pizzas";
-    //return json
-    //return ['name'=>'veg pizzas','base'>'classic'];
-    */
-
-    return view ('pizzas',[ 
-        'pizzas'=>$pizzas,
-        'name'=> request('name'),
-        'age'=> request('age'),
-        ]);
-
-});
-Route::get('/pizzas/{id}', function ($id) {
-    //use the $id variable to query the db for a record
-    return view('details',['id'=>$id]);
-});
+Route::get('/pizzas','PizzaController@index');
+Route::get('/pizzas/{id}','PizzaController@show');
 
