@@ -2,6 +2,7 @@ Request         Route     controller$action      view
 get             /pizzas   PizzaController@index  Index
 get             /pizzas/{id} PizzaController@show   show
 get             /pizzas/create PizzaController@create create
+post             /pizzas      PizzaController@store   ------
 
 
 model(Pizza)- singular of the database table(pizzas) whith first digit uppercase
