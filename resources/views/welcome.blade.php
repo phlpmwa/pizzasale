@@ -20,7 +20,7 @@
                 <div class="title m-b-md">
                    The North's Best Pizza
                 </div>
-
+<a href="/pizzas/create">Order a Pizza</a>
                             </div>
         </div>
 @endsection
