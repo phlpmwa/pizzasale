@@ -11,6 +11,11 @@
         <li>{{$topping}}</li>
   @endforeach  
       </ul>
+    <form action="/pizzas/{{$pizza->id}}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button>delete order</button>
+    </form>
   
     </div>
       <a href="/pizzas" class="back">-See All Pizzas</a>
