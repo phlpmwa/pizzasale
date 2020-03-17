@@ -11,3 +11,6 @@ controller(PizzaController)- what ever the model is called then plus Controller
 index-show all the records.
 show-shows a single item.
 create-
+
+php artisan make model:kebab -mc -creates controller,model and migrations
+
